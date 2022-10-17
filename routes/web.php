@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RichestPeopleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/richestpeople', [RichestPeopleController::class, 'index']);
+Route::delete('/richestpeople/{id}', [RichestPeopleController::class, 'delete'])->name('delete');
